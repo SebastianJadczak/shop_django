@@ -229,7 +229,7 @@ img#min_img{
 }
 
 #delete{
-      background-color: #b90026;
+    background-color: #b90026;
     color:whitesmoke;
     text-decoration: none;
     border:1px solid grey;
@@ -301,6 +301,28 @@ div.order div.order-info{
     margin: 0 20px;
 }
 
+div.order div.order-info ul{
+    margin-top:10px;
+    min-height:75%;
+}
+
+div.order div.order-info ul li{
+    list-style: none;
+    margin-left: 10px;
+    margin-top:5px;
+}
+div.order div.order-info ul li#coupon{
+    margin-top:10px;
+    font-weight: bold;
+}
+div.order div.order-info ul li span{
+    margin-left: 10px;
+}
+div.order div.order-info p.total_price{
+    text-align: right;
+    margin-top:20px;
+    font-weight: bold;
+}
 div.order form.order-form{
     border: 1px solid grey;
     padding:25px;

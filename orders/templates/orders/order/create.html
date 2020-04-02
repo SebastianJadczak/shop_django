@@ -9,7 +9,7 @@ Kasa
 <h1>Kasa</h1>
 <div class="order">
 <div class="order-info">
-    <h3>Zamówienie</h3>
+    <h3>Zamówienie:</h3>
     <ul>
         {% for item in cart %}
         <li>
@@ -18,13 +18,13 @@ Kasa
         </li>
         {% endfor %}
         {% if cart.coupon %}
-        <li>
+        <li id="coupon">
             Kupon "{{cart.coupon.code}}" ({{cart.coupon.discount}}% rabatu)
             <span>{{cart.get_discount|floatformat:"2"}} zł</span>
         </li>
         {% endif %}
     </ul>
-    <p>Wartość całkowita: {{cart.get_total_price_after_discount|floatformat:"2"}} zł</p>
+    <p class="total_price">Wartość całkowita: {{cart.get_total_price_after_discount|floatformat:"2"}} zł</p>
 </div>
 
 <form action="" method="post" class="order-form">

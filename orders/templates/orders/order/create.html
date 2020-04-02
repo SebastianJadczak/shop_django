@@ -1,0 +1,38 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+Kasa
+{% endblock %}
+
+{% block content %}
+<div class="order-general">
+<h1>Kasa</h1>
+<div class="order">
+<div class="order-info">
+    <h3>Zamówienie</h3>
+    <ul>
+        {% for item in cart %}
+        <li>
+            {{item.quantity}}x {{item.product.name}}
+            <span>{{item.total_price}} zł</span>
+        </li>
+        {% endfor %}
+        {% if cart.coupon %}
+        <li>
+            Kupon "{{cart.coupon.code}}" ({{cart.coupon.discount}}% rabatu)
+            <span>{{cart.get_discount|floatformat:"2"}} zł</span>
+        </li>
+        {% endif %}
+    </ul>
+    <p>Wartość całkowita: {{cart.get_total_price_after_discount|floatformat:"2"}} zł</p>
+</div>
+
+<form action="" method="post" class="order-form">
+    <h3>Dane kontaktowe: </h3>
+    {{form.as_p}}
+    <p id="enter_order"><input type="submit" value="Złóż zamówienie" id="enter_order"></p>
+    {% csrf_token %}
+</form>
+</div>
+</div>
+{% endblock %}

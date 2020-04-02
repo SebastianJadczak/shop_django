@@ -1,0 +1,25 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+{% if category %} {{category.title}} {% else %} Produkty {% endif %}
+{%endblock%}
+
+{% block content %}
+<div class="product-detail">
+    <img id="product" src="{%if product.image%} {{product.image.url}} {% else %} {% static "img/no_image.png" %} {% endif %}">
+    <div class="description">
+        <h1>{{product.name}}</h1>
+        <h2><a href="{{product.category.get_absolute_url}}">{{product.category}}</a></h2>
+
+        <p class="description_product">{{product.description|linebreaks}}</p>
+
+        <p class="price">{{product.price}} zł</p>
+        <form action="{% url "cart:cart_add" product.id %}" method="post">
+        {{cart_product_form}}
+        {% csrf_token %}
+        <input class="add_cart" type="submit" value="Dodaj do koszyka">
+        </form>
+
+        </div>
+</div>
+{% endblock %}

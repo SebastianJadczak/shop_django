@@ -1,0 +1,46 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Mój sklep{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet">
+    <link href="{% static "css/base.css" %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="promotion">Dla wszystkich naszych klientów -9%. Kod rabatu: 1234</div>
+<div id="header">
+    <a href="/" class="logo">
+        <img id="logo" src="{% static "img/logo.png" %}" alt="logo">
+    </a>
+    <div id="subheader">
+        <a class="cart">
+            <a href="{% url "cart:cart_detail" %}">
+            <img id="cart" src="{% static "img/cart.png" %}" alt="">
+         </a>
+       {% with total_items=cart|length %}
+        {% if cart|length > 0 %}
+            <a href="{% url "cart:cart_detail" %}">
+
+                {{cart.get_total_price}} zł
+            </a>
+        {% else %}
+            Koszyk jest pusty
+        {% endif %}
+        {% endwith %}
+    </div>
+</div>
+</div>
+
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+<footer>
+    Created by <a href="https://www.linkedin.com/in/sebastian-jadczak-b74a40182">Sebastian Jadczak | BuildWeb</a>
+</footer>
+</body>
+</html>

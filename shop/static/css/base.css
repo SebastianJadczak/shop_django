@@ -1,0 +1,262 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+#promotion{
+    background-color: #010033;
+    width:100%;
+    height:5vh;
+    color:whitesmoke;
+    line-height: 5vh;
+    font-size:17px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#header{
+    height:14vh;
+    width:97vw;
+    font-family: 'Spicy Rice', cursive;
+    font-size: 29px;
+    letter-spacing: 3px;
+    line-height: 10vh;
+    padding:15px;
+    display: flex;
+    justify-content: space-between;
+}
+#header a{
+    color:darkgreen;
+    text-decoration: none;
+}
+#logo{
+    width:180px;
+    height:100px;
+}
+
+#subheader{
+    display: flex;
+    flex-direction: column;
+    line-height: 2vh;
+    text-align: center;
+    font-size: 15px;
+}
+
+#subheader a.cart{
+    margin-top: 15px;
+    width:200px;
+    font-family: sans-serif;
+}
+
+/*End base template*/
+
+
+/*Content list items*/
+img#cart{
+    width:50px;
+    height:50px;
+}
+#content{
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    min-height:78vh;
+    margin-bottom: 30px;
+}
+
+#sidebar{
+    padding: 10px;
+    width:20vw;
+    background-color: #fff8fd;
+}
+#sidebar h3{
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+#sidebar ul{
+    margin-top:25px;
+    list-style: none;
+}
+#sidebar ul li{
+    padding-left:8px;
+    letter-spacing: 2px;
+    height:30px;
+    margin-top:5px;
+}
+#sidebar ul li a{
+    color:black;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 8px;
+}
+
+#sidebar ul li a:hover{
+ font-weight: bold;
+}
+
+
+div.product-list{
+     background-color: #fffaea;
+     width:94%;
+     min-height:80vh;
+}
+div.product-list h3{
+    padding:10px;
+}
+div.list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.item{
+    width:300px;
+    margin:10px;
+}
+div.item a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+div.item a#product_name{
+    margin-left: 10px;
+}
+div.item p.price{
+    margin-left:10px;
+}
+div.item img{
+    width:100%;
+    margin:5px;
+}
+/* End list items */
+
+/* Item view */
+
+div.product-detail{
+    margin: 40px auto;
+    display: flex;
+    width:80vw;
+    height:500px;
+    border: 1px solid grey;
+}
+
+div.product-detail img#product{
+    width:400px;
+    height:400px;
+    margin:50px;
+}
+div.product-detail div.description{
+  margin:50px;
+}
+
+div.description h1{
+    margin-bottom: 5px;
+}
+div.description h2{
+    margin-bottom: 35px;
+}
+div.description h2 a{
+    color:darkblue;
+    text-decoration: none;
+}
+
+div.description p.description_product{
+    font-style: italic;
+}
+
+div.description p.price{
+    margin-top: 30px;
+}
+
+div.description form{
+    margin-top:10px;
+    width:300px;
+    height:200px;
+}
+div.description input.add_cart{
+    padding:10px 10px;
+    color:white;
+    background-color: #00000a;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.6s;
+}
+
+
+/* End item view */
+
+/* View cart page */
+
+div.cart{
+    margin:0 auto;
+}
+div.cart h1{
+    margin-bottom: 30px;
+}
+
+tr td{
+    width:200px;
+    text-align: center;
+}
+td input#change{
+    color: whitesmoke;
+    background-color: black;
+    padding: 3px 7px;
+    border:1px solid grey;
+}
+tr.item{
+    height:40px;
+}
+tr.subtotal{
+    height:30px;
+}
+tr.subtotal td{
+    font-weight: bold;
+}
+tr.cupon{
+    height:40px;
+}
+tr.total{
+    height:50px;
+    font-weight: bold;
+}
+tr.total td{
+    border-top:1px solid grey;
+}
+
+div.discount{
+    margin-top: 30px;
+    padding:25px;
+    border:1px solid grey;
+    width:350px;
+}
+div.discount p{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#enter_coupon{
+    background-color: #b90026;
+    color:whitesmoke;
+    border: 1px solid grey;
+    padding:5px 8px;
+ }
+p.text-right{
+    text-align: right;
+}
+p.text-right a{
+    text-decoration: none;
+    border:1px solid grey;
+}
+
+/* footer - base templates */
+footer{
+    background-color: black;
+    color:whitesmoke;
+    height:4vh;
+    text-align: center;
+    line-height: 4vh;
+}
+footer a{
+    text-decoration: none;
+    color:whitesmoke;
+}

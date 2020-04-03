@@ -553,48 +553,7 @@
 
     div.cart h1 {
         margin-bottom: 30px;
-    }
-
-    tr td {
-        width: 200px;
         text-align: center;
-    }
-
-    td input#change {
-        color: whitesmoke;
-        background-color: black;
-        padding: 3px 7px;
-        border: 1px solid grey;
-    }
-
-    tr.item {
-        height: 40px;
-    }
-
-    tr.subtotal {
-        height: 30px;
-    }
-
-    tr.subtotal td {
-        font-weight: bold;
-    }
-
-    tr.cupon {
-        height: 40px;
-    }
-
-    tr.total {
-        height: 50px;
-        font-weight: bold;
-    }
-
-    tr.total td {
-        border-top: 1px solid grey;
-    }
-
-    img#min_img {
-        width: 100px;
-        height: 100px;
     }
 
     #delete {
@@ -604,7 +563,41 @@
         border: 1px solid grey;
         padding: 4px 8px;
     }
+    tbody {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 100vw;
+        margin-bottom: 20px;
+    }
+    th#product{
+      width:200px;
+    }
+    th#delete_th{
+        width:120px;
+    }
+    th#image{
+        display: none;
+    }
 
+    td#image{
+        display: none;
+    }
+    th#price_detail{
+        display: none;
+    }
+    th#price{
+        display: none;
+    }
+    td.num1{
+        display: none;
+    }
+   th#ammount{
+       display: none;
+   }
+   td#change_ammount{
+       display: none;
+   }
     div.discount {
         margin-top: 30px;
         padding: 20px;
@@ -626,7 +619,8 @@
     }
 
     p.text-right {
-        text-align: right;
+       text-align: center;
+        margin-top:30px;
     }
 
     p.text-right a {
@@ -663,17 +657,16 @@
 
     div.order {
         display: flex;
-        margin-top: 30px;
-        justify-content: center;
+        flex-direction: column;
     }
 
 
     div.order div.order-info {
-        width: 35vw;
+        width: 100vw;
         border: 1px solid grey;
         padding: 25px;
         box-shadow: 1px 1px 1px grey;
-        margin: 0 20px;
+        margin: 20px 0;
     }
 
     div.order div.order-info ul {
@@ -706,7 +699,7 @@
         border: 1px solid grey;
         padding: 25px;
         box-shadow: 1px 1px 1px grey;
-        margin-left: 60px;
+        margin-left: 0px;
     }
 
     form.order-form h3 {
@@ -720,20 +713,27 @@
     form.order-form p label {
         display: inline-block;
         width: 160px;
+        font-size: 18px;
+    }
+    form.order-form p input{
+        height:25px;
+        width:310px;
     }
 
     form.order-form p#enter_order {
-        margin-top: 25px;
-        margin-bottom: 0px;
-        text-align: right;
+        margin: 25px auto;
+       text-align: center;
+
     }
 
     form.order-form p#enter_order input#enter_order {
         background-color: #b90026;
         color: whitesmoke;
         border: 1px solid grey;
-        padding: 8px 13px;
+        padding: 10px 13px;
         font-weight: bold;
+        font-size:18px;
+        height:46px;
     }
 
     /* footer - base templates */

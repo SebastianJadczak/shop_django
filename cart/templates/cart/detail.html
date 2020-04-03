@@ -11,26 +11,26 @@ Koszyk na zakupy
 
 <table class="cart">
     <thread>
-        <tr>
-            <th>Obraz</th>
-            <th>Produkt</th>
-            <th>Ilość</th>
-            <th>Usuń</th>
-            <th>Cena jednostkowa</th>
-            <th>Kwota</th>
+        <tr class="name">
+            <th id="image">Obraz</th>
+            <th id="product">Produkt</th>
+            <th id="ammount">Ilość</th>
+            <th id="delete_th">Usuń</th>
+            <th id="price_detail">Cena jednostkowa</th>
+            <th id="price">Kwota</th>
         </tr>
     </thread>
     <tbody>
         {% for item in cart %}
             {% with product=item.product %}
                 <tr class="item">
-                    <td>
+                    <td id="image">
                         <a href="{{product.get_absolute_url}}">
                             <img id="min_img" src="{% if product.image %} {{product.image.url}} {% else %} {% static "img/no_image.png" %} {% endif %}">
                         </a>
                     </td>
                     <td>{{product.name}}</td>
-                    <td>
+                    <td id="change_ammount">
                         <form action="{% url "cart:cart_add" product.id %}" method="post">
                          {{item.update_quantity_form.quantity}}
                          {{item.update_quantity_form.update}}
@@ -39,8 +39,8 @@ Koszyk na zakupy
                         </form>
                     </td>
                     <td><a href="{% url "cart:cart_remove" product.id %}" id="delete">Usuń</a></td>
-                    <td class="num">{{item.price}} zł</td>
-                    <td class="num">{{item.total_price}} zł</td>
+                    <td class="num1">{{item.price}} zł</td>
+                    <td class="num1">{{item.total_price}} zł</td>
                 </tr>
     {% endwith %}
     {% endfor %}
